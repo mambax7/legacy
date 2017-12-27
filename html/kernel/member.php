@@ -75,6 +75,10 @@ class XoopsMemberHandler
      * constructor
      *
      */
+    public function XoopsMemberHandler(&$db)
+    {
+        return self::__construct($db);
+    }
     public function __construct(&$db)
     {
         $this->_gHandler =new XoopsGroupHandler($db);

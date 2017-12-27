@@ -55,6 +55,10 @@ if (!defined('XOOPS_ROOT_PATH')) {
 class XoopsFormDateTime extends XoopsFormElementTray
 {
 
+    public function XoopsFormDateTime($caption, $name, $size = 15, $value=0)
+    {
+        return self::__construct($caption, $name, $size, $value);
+    }
     public function __construct($caption, $name, $size = 15, $value=0)
     {
         $this->XoopsFormElementTray($caption, '&nbsp;');

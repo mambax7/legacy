@@ -90,6 +90,10 @@ class XoopsFormSelect extends XoopsFormElement
      * @param	int		$size	    Number or rows. "1" makes a drop-down-list
      * @param	bool    $multiple   Allow multiple selections?
      */
+    public function XoopsFormSelect($caption, $name, $value=null, $size=1, $multiple=false)
+    {
+        return self::__construct($caption, $name, $value, $size, $multiple);
+    }
     public function __construct($caption, $name, $value=null, $size=1, $multiple=false)
     {
         $this->setCaption($caption);

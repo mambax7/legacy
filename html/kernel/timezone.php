@@ -6,6 +6,10 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 class XoopsTimezone extends XoopsObject
 {
+    public function XoopsTimezone()
+    {
+        return self::__construct();
+    }
     public function __construct()
     {
         static $initVars;
@@ -23,6 +27,10 @@ class XoopsTimezoneHandler extends XoopsObjectHandler
 {
     public $_mResult;
     
+    public function XoopsTimezoneHandler(&$db)
+    {
+        return self::__construct($db);
+    }
     public function __construct(&$db)
     {
         parent::__construct($db);

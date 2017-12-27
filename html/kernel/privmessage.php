@@ -47,6 +47,10 @@ class XoopsPrivmessage extends XoopsObject
     /**
  * constructor
  **/
+    public function XoopsPrivmessage()
+    {
+        return self::__construct();
+    }
     public function __construct()
     {
         $this->XoopsObject();

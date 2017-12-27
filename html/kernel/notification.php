@@ -61,6 +61,10 @@ class XoopsNotification extends XoopsObject
     /**
      * Constructor
      **/
+    public function XoopsNotification()
+    {
+        return self::__construct();
+    }
     public function __construct()
     {
         $this->XoopsObject();
@@ -205,6 +209,10 @@ class XoopsNotificationHandler extends XoopsObjectHandler
      */
     public $mTriggerPreAction = null;
     
+    public function XoopsNotificationHandler(&$db)
+    {
+        return self::__construct($db);
+    }
     public function __construct(&$db)
     {
         parent::__construct($db);

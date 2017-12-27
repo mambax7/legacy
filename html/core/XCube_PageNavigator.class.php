@@ -112,6 +112,10 @@ class XCube_PageNavigator
      */
     public function XCube_PageNavigator($url, $flags = XCUBE_PAGENAVI_START)
     {
+        return self::__construct($url, $flags);
+    }
+    public function __construct($url, $flags = XCUBE_PAGENAVI_START)
+    {
         $this->mUrl = $url;
         $this->mFlags = $flags;
         

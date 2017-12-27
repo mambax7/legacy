@@ -107,6 +107,10 @@ class XoopsForm
      * @param   string  $method "method" attribute for the <form> tag
      * @param   bool    $addtoken whether to add a security token to the form
      */
+    public function XoopsForm($title, $name, $action, $method="post", $addtoken = false)
+    {
+        return self::__construct($title, $name, $action, $method, $addtoken);
+    }
     public function __construct($title, $name, $action, $method="post", $addtoken = false)
     {
         $this->_title = $title;

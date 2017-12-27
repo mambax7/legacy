@@ -44,6 +44,10 @@ class XoopsTopic
     public $use_permission=false;
     public $mid; // module id used for setting permission
 
+    public function XoopsTopic($table, $topicid=0)
+    {
+        return self::__construct($table, $topicid);
+    }
     public function __construct($table, $topicid=0)
     {
         $this->db =& Database::getInstance();

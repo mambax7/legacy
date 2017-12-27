@@ -59,6 +59,10 @@ class XoopsBlock extends XoopsObject
      *
      * @param mixed $id
      **/
+    public function XoopsBlock($id = null)
+    {
+        return self::__construct($id);
+    }
     public function __construct($id = null)
     {
         static $initVars, $initMap;

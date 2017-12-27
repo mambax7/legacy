@@ -45,6 +45,10 @@ class XoopsGroup extends XoopsObject
     /**
      * constructor 
      */
+    public function XoopsGroup()
+    {
+        return self::__construct();
+    }
     public function __construct()
     {
         static $initVars;
@@ -221,6 +225,10 @@ class XoopsMembership extends XoopsObject
     /**
      * constructor 
      */
+    public function XoopsMembership()
+    {
+        return self::__construct();
+    }
     public function __construct()
     {
         $this->XoopsObject();

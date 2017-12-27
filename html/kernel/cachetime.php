@@ -8,6 +8,10 @@ class XoopsCachetime extends XoopsObject
 {
     public function XoopsCachetime()
     {
+        return self::__construct();
+    }
+    public function __construct()
+    {
         static $initVars;
         if (isset($initVars)) {
             $this->vars = $initVars;
@@ -25,7 +29,11 @@ class XoopsCachetimeHandler extends XoopsObjectHandler
     
     public function XoopsCachetimeHandler(&$db)
     {
-        parent::XoopsObjectHandler($db);
+        return self::__construct($db);
+    }
+    public function __construct(&$db)
+    {
+        parent::__construct($db);
 
         //
         // This handler not connects to database.
