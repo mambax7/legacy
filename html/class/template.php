@@ -58,7 +58,7 @@ class XoopsTpl extends Smarty
     /**
      * Constructor
      **/
-    public function XoopsTpl()
+    public function __construct()
     {
         global $xoopsConfig;
         $this->Smarty();

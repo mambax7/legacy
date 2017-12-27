@@ -65,7 +65,7 @@ class XoopsFormHidden extends XoopsFormElement
      * @param	string	$name	"name" attribute
      * @param	string	$value	"value" attribute
      */
-    public function XoopsFormHidden($name, $value)
+    public function __construct($name, $value)
     {
         $this->setName($name);
         $this->setHidden();

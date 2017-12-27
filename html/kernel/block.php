@@ -59,7 +59,7 @@ class XoopsBlock extends XoopsObject
      *
      * @param mixed $id
      **/
-    public function XoopsBlock($id = null)
+    public function __construct($id = null)
     {
         static $initVars, $initMap;
         if (isset($initVars)) {

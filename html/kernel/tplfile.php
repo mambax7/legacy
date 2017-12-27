@@ -34,7 +34,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 class XoopsTplfile extends XoopsObject
 {
 
-    public function XoopsTplfile()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

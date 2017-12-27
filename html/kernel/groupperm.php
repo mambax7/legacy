@@ -63,7 +63,7 @@ class XoopsGroupPerm extends XoopsObject
      * Constructor
      * 
      */
-    public function XoopsGroupPerm()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

@@ -73,7 +73,7 @@ class XoopsFormCheckBox extends XoopsFormElement
      * @param	string  $name
      * @param	mixed   $value  Either one value as a string or an array of them.   
      */
-    public function XoopsFormCheckBox($caption, $name, $value = null)
+    public function __construct($caption, $name, $value = null)
     {
         $this->setCaption($caption);
         $this->setName($name);

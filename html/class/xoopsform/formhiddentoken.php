@@ -51,7 +51,7 @@ class XoopsFormHiddenToken extends XoopsFormHidden
      *
      * @param   string  $name   "name" attribute
      */
-    public function XoopsFormHiddenToken($name = null, $timeout = 360)
+    public function __construct($name = null, $timeout = 360)
     {
         if (empty($name)) {
             $token =& XoopsMultiTokenHandler::quickCreate(XOOPS_TOKEN_DEFAULT);
