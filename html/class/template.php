@@ -60,6 +60,10 @@ class XoopsTpl extends Smarty
      **/
     public function XoopsTpl()
     {
+        return self::__construct();
+    }
+    public function __construct()
+    {
         global $xoopsConfig;
         $this->Smarty();
         $this->compile_id = XOOPS_URL;

@@ -63,6 +63,10 @@ class XoopsNotification extends XoopsObject
      **/
     public function XoopsNotification()
     {
+        return self::__construct();
+    }
+    public function __construct()
+    {
         $this->XoopsObject();
         $this->initVar('not_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('not_modid', XOBJ_DTYPE_INT, null, false);
@@ -207,7 +211,11 @@ class XoopsNotificationHandler extends XoopsObjectHandler
     
     public function XoopsNotificationHandler(&$db)
     {
-        parent::XoopsObjectHandler($db);
+        return self::__construct($db);
+    }
+    public function __construct(&$db)
+    {
+        parent::__construct($db);
         
         $this->mTrigger =new XCube_Delegate();
         $this->mTrigger->register('XoopsNotificationHandler.Trigger');

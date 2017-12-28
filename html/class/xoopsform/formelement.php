@@ -116,6 +116,10 @@ class XoopsFormElement
      */
     public function XoopsFormElement()
     {
+        return self::__construct();
+    }
+    public function __construct()
+    {
         exit("This class cannot be instantiated!");
     }
 

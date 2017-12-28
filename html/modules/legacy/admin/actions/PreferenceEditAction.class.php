@@ -212,7 +212,7 @@ class Legacy_AbstractPreferenceEditState
 {
     public $_mMaster = null;
 
-    public function Legacy_AbstractPreferenceEditState(&$master)
+    public function __construct(&$master)
     {
         $this->_mMaster =& $master;
     }

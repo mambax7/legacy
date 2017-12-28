@@ -77,6 +77,10 @@ class XoopsFormRadio extends XoopsFormElement
      */
     public function XoopsFormRadio($caption, $name, $value = null)
     {
+        return self::__construct($caption, $name, $value);
+    }
+    public function __construct($caption, $name, $value = null)
+    {
         $this->setCaption($caption);
         $this->setName($name);
         if (isset($value)) {

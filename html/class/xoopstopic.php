@@ -33,7 +33,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 }
 include_once XOOPS_ROOT_PATH."/class/xoopstree.php";
 
-class xoopstopic
+class XoopsTopic
 {
     public $table;
     public $topic_id;
@@ -45,6 +45,10 @@ class xoopstopic
     public $mid; // module id used for setting permission
 
     public function XoopsTopic($table, $topicid=0)
+    {
+        return self::__construct($table, $topicid);
+    }
+    public function __construct($table, $topicid=0)
     {
         $this->db =& Database::getInstance();
         $this->table = $table;

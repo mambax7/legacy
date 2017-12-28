@@ -83,6 +83,10 @@ class XoopsFormElementTray extends XoopsFormElement
      */
     public function XoopsFormElementTray($caption, $delimeter="&nbsp;", $name="")
     {
+        return self::__construct($caption, $delimeter, $name);
+    }
+    public function __construct($caption, $delimeter="&nbsp;", $name="")
+    {
         $this->setName($name);
         $this->setCaption($caption);
         $this->_delimeter = $delimeter;

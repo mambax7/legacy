@@ -79,6 +79,10 @@ class XoopsFormButton extends XoopsFormElement
      */
     public function XoopsFormButton($caption, $name, $value="", $type="button")
     {
+        return self::__construct($caption, $name, $value, $type);
+    }
+    public function __construct($caption, $name, $value="", $type="button")
+    {
         $this->setCaption($caption);
         $this->setName($name);
         $this->_type = $type;

@@ -61,6 +61,10 @@ class XoopsBlock extends XoopsObject
      **/
     public function XoopsBlock($id = null)
     {
+        return self::__construct($id);
+    }
+    public function __construct($id = null)
+    {
         static $initVars, $initMap;
         if (isset($initVars)) {
             $this->vars = $initVars;

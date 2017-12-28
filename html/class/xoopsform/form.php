@@ -109,6 +109,10 @@ class XoopsForm
      */
     public function XoopsForm($title, $name, $action, $method="post", $addtoken = false)
     {
+        return self::__construct($title, $name, $action, $method, $addtoken);
+    }
+    public function __construct($title, $name, $action, $method="post", $addtoken = false)
+    {
         $this->_title = $title;
         $this->_name = $name;
         $this->_action = $action;

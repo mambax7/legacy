@@ -62,6 +62,10 @@ class XoopsSessionHandler
      */
     public function XoopsSessionHandler(&$db)
     {
+        return self::__construct($db);
+    }
+    public function __construct(&$db)
+    {
         $this->db =& $db;
     }
 

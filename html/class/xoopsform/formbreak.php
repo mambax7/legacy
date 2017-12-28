@@ -8,6 +8,10 @@ class XoopsFormBreak extends XoopsFormElement
 {
     public function XoopsFormBreak($extra = '', $class= '')
     {
+        return self::__construct($extra, $class);
+    }
+    public function __construct($extra = '', $class= '')
+    {
         $this->setExtra($extra);
         $this->setClass($class);
     }

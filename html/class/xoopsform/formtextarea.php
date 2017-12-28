@@ -85,6 +85,10 @@ class XoopsFormTextArea extends XoopsFormElement
      */
     public function XoopsFormTextArea($caption, $name, $value="", $rows=5, $cols=50)
     {
+        return self::__construct($caption, $name, $value, $rows, $cols);
+    }
+    public function __construct($caption, $name, $value="", $rows=5, $cols=50)
+    {
         $this->setCaption($caption);
         $this->setName($name);
         $this->_rows = intval($rows);

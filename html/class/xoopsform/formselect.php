@@ -92,6 +92,10 @@ class XoopsFormSelect extends XoopsFormElement
      */
     public function XoopsFormSelect($caption, $name, $value=null, $size=1, $multiple=false)
     {
+        return self::__construct($caption, $name, $value, $size, $multiple);
+    }
+    public function __construct($caption, $name, $value=null, $size=1, $multiple=false)
+    {
         $this->setCaption($caption);
         $this->setName($name);
         $this->_multiple = $multiple;

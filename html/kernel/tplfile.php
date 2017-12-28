@@ -36,6 +36,10 @@ class XoopsTplfile extends XoopsObject
 
     public function XoopsTplfile()
     {
+        return self::__construct();
+    }
+    public function __construct()
+    {
         static $initVars;
         if (isset($initVars)) {
             $this->vars = $initVars;

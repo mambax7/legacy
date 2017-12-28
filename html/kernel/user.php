@@ -69,6 +69,10 @@ class XoopsUser extends XoopsObject
      */
     public function XoopsUser($id = null)
     {
+        return self::__construct($id);
+    }
+    public function __construct($id = null)
+    {
         static $initVars;
         if (isset($initVars)) {
             $this->vars = $initVars;

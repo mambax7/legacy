@@ -70,6 +70,10 @@ class XoopsFormSelectTheme extends XoopsFormSelect
      */
     public function XoopsFormSelectTheme($caption, $name, $value=null, $size=1)
     {
+        return self::__construct($caption, $name, $value, $size);
+    }
+    public function __construct($caption, $name, $value=null, $size=1)
+    {
         $this->XoopsFormSelect($caption, $name, $value, $size);
         $this->addOptionArray(XoopsLists::getThemesList());
     }

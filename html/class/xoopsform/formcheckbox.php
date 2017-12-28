@@ -75,6 +75,10 @@ class XoopsFormCheckBox extends XoopsFormElement
      */
     public function XoopsFormCheckBox($caption, $name, $value = null)
     {
+        return self::__construct($caption, $name, $value);
+    }
+    public function __construct($caption, $name, $value = null)
+    {
         $this->setCaption($caption);
         $this->setName($name);
         if (isset($value)) {

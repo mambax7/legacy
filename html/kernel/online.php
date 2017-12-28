@@ -61,6 +61,10 @@ class XoopsOnlineHandler
      */
     public function XoopsOnlineHandler(&$db)
     {
+        return self::__construct($db);
+    }
+    public function __construct(&$db)
+    {
         $this->db =& $db;
     }
 

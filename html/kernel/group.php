@@ -47,6 +47,10 @@ class XoopsGroup extends XoopsObject
      */
     public function XoopsGroup()
     {
+        return self::__construct();
+    }
+    public function __construct()
+    {
         static $initVars;
         if (isset($initVars)) {
             $this->vars = $initVars;
@@ -222,6 +226,10 @@ class XoopsMembership extends XoopsObject
      * constructor 
      */
     public function XoopsMembership()
+    {
+        return self::__construct();
+    }
+    public function __construct()
     {
         $this->XoopsObject();
         $this->initVar('linkid', XOBJ_DTYPE_INT, null, false);
