@@ -34,10 +34,6 @@ if (!defined('XOOPS_ROOT_PATH')) {
 class XoopsTplfile extends XoopsObject
 {
 
-    public function XoopsTplfile()
-    {
-        return self::__construct();
-    }
     public function __construct()
     {
         static $initVars;
@@ -57,6 +53,10 @@ class XoopsTplfile extends XoopsObject
         $this->initVar('tpl_type', XOBJ_DTYPE_OTHER, null, false);
         $this->initVar('tpl_source', XOBJ_DTYPE_SOURCE, null, false);
         $initVars = $this->vars;
+    }
+    public function XoopsTplfile()
+    {
+        return self::__construct();
     }
 
     public function &getSource()

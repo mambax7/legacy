@@ -58,10 +58,6 @@ class XoopsTpl extends Smarty
     /**
      * Constructor
      **/
-    public function XoopsTpl()
-    {
-        return self::__construct();
-    }
     public function __construct()
     {
         global $xoopsConfig;
@@ -107,6 +103,10 @@ class XoopsTpl extends Smarty
         //      'xoopsTpl'     [I/O] : $this
         //
         XCube_DelegateUtils::call('XoopsTpl.New',  new XCube_Ref($this));
+    }
+    public function XoopsTpl()
+    {
+        return self::__construct();
     }
 
     /**

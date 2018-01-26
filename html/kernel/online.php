@@ -59,13 +59,13 @@ class XoopsOnlineHandler
      * 
      * @param	object  &$db    {@link XoopsHandlerFactory} 
      */
-    public function XoopsOnlineHandler(&$db)
-    {
-        return self::__construct($db);
-    }
     public function __construct(&$db)
     {
         $this->db =& $db;
+    }
+    public function XoopsOnlineHandler(&$db)
+    {
+        return self::__construct($db);
     }
 
     /**

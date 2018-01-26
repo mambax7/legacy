@@ -67,10 +67,6 @@ class XoopsUser extends XoopsObject
      * @param array $id Array of key-value-pairs to be assigned to the user. (for backward compatibility only)
      * @param int $id ID of the user to be loaded from the database.
      */
-    public function XoopsUser($id = null)
-    {
-        return self::__construct($id);
-    }
     public function __construct($id = null)
     {
         static $initVars;
@@ -124,6 +120,10 @@ class XoopsUser extends XoopsObject
                 }
             }
         }
+    }
+    public function XoopsUser($id = null)
+    {
+        return self::__construct($id);
     }
 
     /**
