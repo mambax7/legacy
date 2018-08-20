@@ -6,10 +6,6 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 class XoopsCachetime extends XoopsObject
 {
-    public function XoopsCachetime()
-    {
-        return self::__construct();
-    }
     public function __construct()
     {
         static $initVars;
@@ -21,16 +17,16 @@ class XoopsCachetime extends XoopsObject
         $this->initVar('label', XOBJ_DTYPE_TXTBOX, null, true, 255);
         $initVars = $this->vars;
     }
+    public function XoopsCachetime()
+    {
+        return self::__construct();
+    }
 }
 
 class XoopsCachetimeHandler extends XoopsObjectHandler
 {
     public $_mResult;
     
-    public function XoopsCachetimeHandler(&$db)
-    {
-        return self::__construct($db);
-    }
     public function __construct(&$db)
     {
         parent::__construct($db);
@@ -51,6 +47,10 @@ class XoopsCachetimeHandler extends XoopsObjectHandler
             "604800"  => _WEEK,
             "2592000" => _MONTH
         );
+    }
+    public function XoopsCachetimeHandler(&$db)
+    {
+        return self::__construct($db);
     }
     
     public function &create()

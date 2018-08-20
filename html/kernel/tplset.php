@@ -34,10 +34,6 @@ if (!defined('XOOPS_ROOT_PATH')) {
 class XoopsTplset extends XoopsObject
 {
 
-    public function XoopsTplset()
-    {
-        return self::__construct();
-    }
     public function __construct()
     {
         static $initVars;
@@ -52,6 +48,10 @@ class XoopsTplset extends XoopsObject
         $this->initVar('tplset_credits', XOBJ_DTYPE_TXTAREA, null, false);
         $this->initVar('tplset_created', XOBJ_DTYPE_INT, 0, false);
         $initVars = $this->vars;
+    }
+    public function XoopsTplset()
+    {
+        return self::__construct();
     }
 }
 

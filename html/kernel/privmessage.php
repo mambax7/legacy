@@ -47,10 +47,6 @@ class XoopsPrivmessage extends XoopsObject
     /**
  * constructor
  **/
-    public function XoopsPrivmessage()
-    {
-        return self::__construct();
-    }
     public function __construct()
     {
         $this->XoopsObject();
@@ -62,6 +58,10 @@ class XoopsPrivmessage extends XoopsObject
         $this->initVar('msg_time', XOBJ_DTYPE_OTHER, time(), false);
         $this->initVar('msg_text', XOBJ_DTYPE_TXTAREA, null, true);
         $this->initVar('read_msg', XOBJ_DTYPE_INT, 0, false);
+    }
+    public function XoopsPrivmessage()
+    {
+        return self::__construct();
     }
     
     public function &getFromUser()
